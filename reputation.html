@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+	<title>Are you Ready For It?</title>
+	<style>
+	div{
+	font-family: "Engravers Old English";
+	text-align: center;
+	color: white;
+	}
+	.count {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	}
+	body {
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+    }
+	@font-face {
+    font-family: Engravers Old English;
+    src: url('Engravers Old English Normal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+	}
+	</style>
+</head>
+
+<body>
+    <div class="count">
+		<h1 style="font-size:1000%">reputation.</h1>
+		<h1 style="font-size:900%"><span id="count2">xxx</span></h1>
+	</div>
+	
+	<script type="text/javascript">
+	var oneDay = 24*60*60*1000;
+	var thirdDate = new Date("2017-11-10T00:00:00Z");
+	
+	function count(){
+	var firstDate = new Date();
+	
+	var diffDays2 = (thirdDate.getTime() - firstDate.getTime()) / oneDay;
+	var diffHours2 = (diffDays2 - Math.floor(diffDays2)) * 24;
+	var diffMinutes2 = (diffHours2 - Math.floor(diffHours2)) * 60;
+	var diffSeconds2 = (diffMinutes2 - Math.floor(diffMinutes2)) * 60;
+	
+	diffDays2 = Math.floor(diffDays2);
+	diffHours2 = Math.floor(diffHours2);
+	diffMinutes2 = Math.floor(diffMinutes2);
+	diffSeconds2 = Math.floor(diffSeconds2);
+	
+	if (thirdDate > firstDate ){
+		document.getElementById("count2").innerHTML = diffDays2 + "d : " + diffHours2 + "h : " + diffMinutes2 + "m : " + diffSeconds2 + "s";
+	} else {
+		document.getElementById("count2").innerHTML = "Are you ready for it?";
+	}
+	
+	};
+		
+	window.setInterval(function(){
+		count();
+	}, 250);
+
+	</script>
+</body>
+</html>
