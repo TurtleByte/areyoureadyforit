@@ -3,26 +3,27 @@
 	<title>Are you Ready For It?</title>
 	<style>
 	div{
-	font-family: "Engravers Old English";
+	font-family: "Kepler Std Bold Semicondensed Display";
 	text-align: center;
-	color: white;
+	color: black;
 	}
 	.count {
 	position: absolute;
-	top: 50%;
+	top: 80%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
 	}
 	body {
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url("rep.png");
+	background-position: center;
+	background-size:70%;
+	background-repeat: no-repeat;
 	background-attachment: fixed;
     }
 	@font-face {
-    font-family: Engravers Old English;
-    src: url('Engravers Old English Normal.ttf') format('truetype');
+    font-family: Kepler Std Bold Semicondensed Display;
+    src: url('Kepler Std Bold Semicondensed Display.otf');
     font-weight: normal;
     font-style: normal;
 	}
@@ -31,8 +32,7 @@
 
 <body>
     <div class="count">
-		<h1 style="font-size:1000%">reputation.</h1>
-		<h1 style="font-size:900%"><span id="count2">xxx</span></h1>
+		<h1 style="font-size:500%"><span id="count2">xxx</span></h1>
 	</div>
 	
 	<script type="text/javascript">
@@ -53,7 +53,7 @@
 	diffSeconds2 = Math.floor(diffSeconds2);
 	
 	if (thirdDate > firstDate ){
-		document.getElementById("count2").innerHTML = diffDays2 + "d : " + diffHours2 + "h : " + diffMinutes2 + "m : " + diffSeconds2 + "s";
+		document.getElementById("count2").innerHTML = diffDays2 + " Days, " + diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
 	} else {
 		document.getElementById("count2").innerHTML = "Are you ready for it?";
 	}
