@@ -32,46 +32,7 @@
 
 <body>
     <div class="count">
-		<h1 style="font-size:500%"><span id="count2">Taylor Swift.</span></h1>
+		<h1 style="font-size:500%"><span id="count2">Baby, let the games begin.</span></h1>
 	</div>
-	
-	<script type="text/javascript">
-	var oneDay = 24*60*60*1000;
-	var thirdDate = new Date("2017-11-10T05:00:00Z");
-	
-	function count(){
-	var firstDate = new Date();
-	
-	var diffDays2 = (thirdDate.getTime() - firstDate.getTime()) / oneDay;
-	var diffHours2 = (diffDays2 - Math.floor(diffDays2)) * 24;
-	var diffMinutes2 = (diffHours2 - Math.floor(diffHours2)) * 60;
-	var diffSeconds2 = (diffMinutes2 - Math.floor(diffMinutes2)) * 60;
-	
-	diffDays2 = Math.floor(diffDays2);
-	diffHours2 = Math.floor(diffHours2);
-	diffMinutes2 = Math.floor(diffMinutes2);
-	diffSeconds2 = Math.floor(diffSeconds2);
-	
-	if (thirdDate > firstDate){
-		if (diffDays2 == 0 && diffHours2 == 0 && diffMinutes2 == 0){
-			document.getElementById("count2").innerHTML = diffSeconds2 + " Seconds";
-		} else if (diffDays2 == 0 && diffHours2 == 0){
-			document.getElementById("count2").innerHTML = diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
-		} else if (diffDays2 == 0){
-			document.getElementById("count2").innerHTML = diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
-		} else {	
-			document.getElementById("count2").innerHTML = diffDays2 + " Days, " + diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
-		};
-	} else {
-		document.getElementById("count2").innerHTML = "...Ready For It?";
-	}
-	
-	};
-		
-	window.setInterval(function(){
-		count();
-	}, 250);
-
-	</script>
 </body>
 </html>
