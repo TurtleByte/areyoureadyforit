@@ -36,14 +36,13 @@
 
 <body>
     <div class="count">
-		<h1><span style="font-size:200%"><a href="https://discord.gg/taylorswift/">/r/TaylorSwift Discord<br>Second Anniversary</span></a><br>
+		<h1><a href="https://discord.gg/taylorswift/"><span id="message" style="font-size:200%">/r/TaylorSwift Discord <br> Second Anniversary</span></a><br>
 		<span id="count2" style="font-size:125%"></span></h1>
 	</div>
 	
 	<script type="text/javascript">
 	var oneDay = 24*60*60*1000;
-	var thirdDate = new Date("2017-11-22T19:31:07Z");
-	
+	var thirdDate = new Date("2017-11-22T19:31:07Z");	
 	
 	function count(){
 	var firstDate = new Date();
@@ -58,6 +57,18 @@
 	diffMinutes2 = Math.floor(diffMinutes2);
 	diffSeconds2 = Math.floor(diffSeconds2);
 	
+	var diffDays = (firstDate.getTime() - thirdDate.getTime()) / oneDay;
+	var diffHours = (diffDays - Math.floor(diffDays)) * 24;
+	var diffMinutes = (diffHours - Math.floor(diffHours)) * 60;
+	var diffSeconds = (diffMinutes - Math.floor(diffMinutes)) * 60;
+
+	diffDays = Math.floor(diffDays);
+	diffHours = Math.floor(diffHours);
+	diffMinutes = Math.floor(diffMinutes);
+	diffSeconds = Math.floor(diffSeconds);
+	
+	//i get it, it's always plural. look, i'm lazy.
+	
 	if (thirdDate > firstDate){
 		if (diffDays2 == 0 && diffHours2 == 0 && diffMinutes2 == 0){
 		document.getElementById("count2").innerHTML = diffSeconds2 + " Seconds";
@@ -69,9 +80,18 @@
 			document.getElementById("count2").innerHTML = diffDays2 + " Days, " + diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
 		};
 	} else {
-		document.getElementById("count2").innerHTML = "Welcome to Discord Year 3: Junior Year!";
+		document.body.style.backgroundImage = "url('bigreputation.png')";
+		document.getElementById("message").innerHTML = "/r/TaylorSwift Discord <br> Year Three: Junior Year";
+		if(diffDays == 0 && diffHours == 0 && diffMinutes == 0){
+		document.getElementById("count2").innerHTML = diffSeconds + " Seconds";
+		} else if (diffDays == 0 && diffHours == 0){
+			document.getElementById("count2").innerHTML = diffMinutes + " Minutes, " + diffSeconds + " Seconds";
+		} else if (diffDays == 0){
+			document.getElementById("count2").innerHTML = diffHours + " Hours, " + diffMinutes + " Minutes, " + diffSeconds + " Seconds";
+		} else {	
+			document.getElementById("count2").innerHTML = diffDays + " Days, " + diffHours + " Hours, " + diffMinutes + " Minutes, " + diffSeconds + " Seconds";
+		};
 	}
-	
 	};
 		
 	window.setInterval(function(){
