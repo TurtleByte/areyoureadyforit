@@ -3,9 +3,9 @@
 	<title>Are you Ready For It?</title>
 	<style>
 	div{
-	font-family: "Uni Sans Heavy";
-	text-align: right;
-	color: #7289da;
+	font-family: "Whatnot";
+	text-align: center;
+	color: black;
 	}
 	.count {
 	position: absolute;
@@ -15,34 +15,34 @@
 	width: 90%;
 	}
 	body {
-    background-image: url("tsn.jpg");
+    background-image: url("hellisempty.jpg");
 	background-position: 50% 40%;
 	background-size:100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
     }
 	@font-face {
-    font-family: Uni Sans Heavy;
-    src: url('Uni Sans Heavy.otf');
+    font-family: Whatnot;
+    src: url('Whatnot W00 Regular.ttf');
     font-weight: normal;
     font-style: normal;
 	}
-	a:link {
+	a {
     text-decoration: none;
-	color: #7289da;
+	color: black;
 	}
 	</style>
 </head>
 
 <body>
     <div class="count">
-		<h1><a href="https://discord.gg/taylorswift/"><span id="message" style="font-size:200%">/r/TaylorSwift Discord <br> Second Anniversary</span></a><br>
-		<span id="count2" style="font-size:125%"></span></h1>
+		<h1><a href="http://store.steampowered.com/agecheck/app/554620/"><span id="message" style="font-size:200%">Life Is Strange: Before The Storm Episode 3</span></a><br>
+		<span id="count2" style="font-size:150%"></span></h1>
 	</div>
 	
 	<script type="text/javascript">
 	var oneDay = 24*60*60*1000;
-	var thirdDate = new Date("2017-11-22T19:31:07Z");	
+	var thirdDate = new Date("2017-12-19T17:00:00Z");
 	
 	function count(){
 	var firstDate = new Date();
@@ -80,8 +80,8 @@
 			document.getElementById("count2").innerHTML = diffDays2 + " Days, " + diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
 		};
 	} else {
-		document.body.style.backgroundImage = "url('bigreputation.png')";
-		document.getElementById("message").innerHTML = "/r/TaylorSwift Discord <br> Year Three: Junior Year";
+		document.body.style.backgroundImage = "url('hellisempty.jpg')";
+		document.getElementById("message").innerHTML = "Hell Is Empty";
 		if(diffDays == 0 && diffHours == 0 && diffMinutes == 0){
 		document.getElementById("count2").innerHTML = diffSeconds + " Seconds";
 		} else if (diffDays == 0 && diffHours == 0){
