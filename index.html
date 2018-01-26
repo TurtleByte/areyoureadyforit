@@ -34,7 +34,7 @@
 	.shows {
 	position: relative;
 	transform: translate(0%, 110%);
-	width: 75%;
+	width: 65%;
 	height: 100%;
 	float: right;
 	}
@@ -49,7 +49,8 @@
 		<span id="count2" style="font-size:150%"></span></h1>
 	</div>
 	<div class="shows">
-	<span style="font-size:175%"> 
+	<span style="font-size:225%">Click On The Show You're Attending<br></span>
+	<span style="font-size:175%">
 		<span onclick=show(0)>Glendale</span> | 
 		<span onclick=show(1)>Santa Monica Day 1</span> | 
 		<span onclick=show(2)>Santa Monica Day 2</span> | 
@@ -59,6 +60,12 @@
 		<span onclick=show(6)>Denver</span> |
 		<span onclick=show(7)>Chicago Day 1</span> |
 		<span onclick=show(8)>Chicago Day 2</span> |
+		<span onclick=show(9)>Manchester Day 1</span> |
+		<span onclick=show(10)>Manchester Day 2</span> |
+		<span onclick=show(11)>Dublin Day 1</span> |
+		<span onclick=show(12)>Dublin Day 2</span> |
+		<span onclick=show(13)>London Day 1</span> |
+		<span onclick=show(14)>London Day 2</span> |
 		</div>
 	<script type="text/javascript">
 	var oneDay = 24*60*60*1000;
@@ -73,7 +80,13 @@
 		"CenturyLink Field",
 		"Sports Authority Field at Mile High",
 		"Soldier Field Day 1",
-		"Soldier Field Day 2",];
+		"Soldier Field Day 2",
+		"Etihad Stadium Day 1",
+		"Etihad Stadium Day 2",
+		"Croke Park Day 1",
+		"Croke Park Day 2",
+		"Wembley Stadium Day 1",
+		"Wembley Stadium Day 2",];
 	
 	var cityName = [
 		"Glendale, Arizona, USA",
@@ -84,7 +97,13 @@
 		"Seattle, Washington, USA",
 		"Denver, Colorado, USA",
 		"Chicago, Illinois, USA",
-		"Chicago, Illinois, USA",];
+		"Chicago, Illinois, USA",
+		"Manchester, England, UK",
+		"Manchester, England, UK",
+		"Dublin, Ireland",
+		"Dublin, Ireland",
+		"London, England, UK",
+		"London, England, UK",];
 	
 	var showTime = [
 		new Date("2018-05-09T03:00:00Z"),
@@ -95,7 +114,13 @@
 		new Date("2018-05-23T03:00:00Z"),
 		new Date("2018-05-26T02:00:00Z"),
 		new Date("2018-06-02T01:00:00Z"),
-		new Date("2018-06-03T01:00:00Z"),];
+		new Date("2018-06-03T01:00:00Z"),
+		new Date("2018-06-08T19:00:00Z"),
+		new Date("2018-06-09T19:00:00Z"),
+		new Date("2018-06-15T19:00:00Z"),
+		new Date("2018-06-16T19:00:00Z"),
+		new Date("2018-06-22T01:00:00Z"),
+		new Date("2018-06-23T01:00:00Z"),];
 		
 	function show(a){
 		stadium = stadiumName[a];
