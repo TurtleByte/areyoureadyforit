@@ -185,53 +185,53 @@
 	show(0);
 	
 	function count(){
-	var firstDate = new Date();
-	
-	var diffDays2 = (thirdDate.getTime() - firstDate.getTime()) / oneDay;
-	var diffHours2 = (diffDays2 - Math.floor(diffDays2)) * 24;
-	var diffMinutes2 = (diffHours2 - Math.floor(diffHours2)) * 60;
-	var diffSeconds2 = (diffMinutes2 - Math.floor(diffMinutes2)) * 60;
-	
-	diffDays2 = Math.floor(diffDays2);
-	diffHours2 = Math.floor(diffHours2);
-	diffMinutes2 = Math.floor(diffMinutes2);
-	diffSeconds2 = Math.floor(diffSeconds2);
-	
-	var diffDays = (firstDate.getTime() - thirdDate.getTime()) / oneDay;
-	var diffHours = (diffDays - Math.floor(diffDays)) * 24;
-	var diffMinutes = (diffHours - Math.floor(diffHours)) * 60;
-	var diffSeconds = (diffMinutes - Math.floor(diffMinutes)) * 60;
+		var firstDate = new Date();
+		
+		var diffDays2 = (thirdDate.getTime() - firstDate.getTime()) / oneDay;
+		var diffHours2 = (diffDays2 - Math.floor(diffDays2)) * 24;
+		var diffMinutes2 = (diffHours2 - Math.floor(diffHours2)) * 60;
+		var diffSeconds2 = (diffMinutes2 - Math.floor(diffMinutes2)) * 60;
+		
+		diffDays2 = Math.floor(diffDays2);
+		diffHours2 = Math.floor(diffHours2);
+		diffMinutes2 = Math.floor(diffMinutes2);
+		diffSeconds2 = Math.floor(diffSeconds2);
+		
+		var diffDays = (firstDate.getTime() - thirdDate.getTime()) / oneDay;
+		var diffHours = (diffDays - Math.floor(diffDays)) * 24;
+		var diffMinutes = (diffHours - Math.floor(diffHours)) * 60;
+		var diffSeconds = (diffMinutes - Math.floor(diffMinutes)) * 60;
 
-	diffDays = Math.floor(diffDays);
-	diffHours = Math.floor(diffHours);
-	diffMinutes = Math.floor(diffMinutes);
-	diffSeconds = Math.floor(diffSeconds);
+		diffDays = Math.floor(diffDays);
+		diffHours = Math.floor(diffHours);
+		diffMinutes = Math.floor(diffMinutes);
+		diffSeconds = Math.floor(diffSeconds);
 	
 	//i get it, it's always plural. look, i'm lazy.
 	
-	if (thirdDate > firstDate){
-		if (diffDays2 == 0 && diffHours2 == 0 && diffMinutes2 == 0){
-		document.getElementById("count2").innerHTML = diffSeconds2 + " Seconds";
-		} else if (diffDays2 == 0 && diffHours2 == 0){
-			document.getElementById("count2").innerHTML = diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
-		} else if (diffDays2 == 0){
-			document.getElementById("count2").innerHTML = diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
-		} else {	
-			document.getElementById("count2").innerHTML = diffDays2 + " Days, " + diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
-		};
-	} else {
-		//document.body.style.backgroundImage = "url('hellisempty.jpg')";
-		document.getElementById("city").innerHTML = "Are you ready for it?";
-		if(diffDays == 0 && diffHours == 0 && diffMinutes == 0){
-		document.getElementById("count2").innerHTML = diffSeconds + " Seconds";
-		} else if (diffDays == 0 && diffHours == 0){
-			document.getElementById("count2").innerHTML = diffMinutes + " Minutes, " + diffSeconds + " Seconds";
-		} else if (diffDays == 0){
-			document.getElementById("count2").innerHTML = diffHours + " Hours, " + diffMinutes + " Minutes, " + diffSeconds + " Seconds";
-		} else {	
-			document.getElementById("count2").innerHTML = diffDays + " Days, " + diffHours + " Hours, " + diffMinutes + " Minutes, " + diffSeconds + " Seconds";
-		};
-	}
+		if (thirdDate > firstDate){
+			if (diffDays2 == 0 && diffHours2 == 0 && diffMinutes2 == 0){
+			document.getElementById("count2").innerHTML = diffSeconds2 + " Seconds";
+			} else if (diffDays2 == 0 && diffHours2 == 0){
+				document.getElementById("count2").innerHTML = diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
+			} else if (diffDays2 == 0){
+				document.getElementById("count2").innerHTML = diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
+			} else {	
+				document.getElementById("count2").innerHTML = diffDays2 + " Days, " + diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
+			};
+		} else {
+			//document.body.style.backgroundImage = "url('hellisempty.jpg')";
+			document.getElementById("city").innerHTML = "End Game.";
+			if(diffDays == 0 && diffHours == 0 && diffMinutes == 0){
+			document.getElementById("count2").innerHTML = diffSeconds + " Seconds";
+			} else if (diffDays == 0 && diffHours == 0){
+				document.getElementById("count2").innerHTML = diffMinutes + " Minutes, " + diffSeconds + " Seconds";
+			} else if (diffDays == 0){
+				document.getElementById("count2").innerHTML = diffHours + " Hours, " + diffMinutes + " Minutes, " + diffSeconds + " Seconds";
+			} else {	
+				document.getElementById("count2").innerHTML = diffDays + " Days, " + diffHours + " Hours, " + diffMinutes + " Minutes, " + diffSeconds + " Seconds";
+			};
+		}
 	};
 
 	$('.showButton').click(function(){
