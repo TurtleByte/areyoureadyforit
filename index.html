@@ -29,7 +29,7 @@
 	}
 	a {
     text-decoration: none;
-	color: black;
+	color: rgb(239,0,128);
 	}
 	.shows {
 	position: relative;
@@ -48,8 +48,8 @@
 <body>
     <div class="count">
 		<img src="rep.png" width="45%" /><br>
-		<h1><span id="stadium" style="font-size:200%">University of Phoenix Stadium</span><br>
-		<span id="city" style="font-size:175%">Glendale, Arizona, USA</span><br>
+		<h1><span id="stadium" style="font-size:200%"></span><br>
+		<span id="city" style="font-size:175%"></span><br>
 		<span id="count2" style="font-size:150%"></span></h1>
 	</div>
 	<div class="shows">
@@ -107,12 +107,15 @@
 		<span class="showButton" onclick=show(48)>Sydney</span> |
 		<span class="showButton" onclick=show(49)>Brisbane</span> |
 		<span class="showButton" onclick=show(50)>Auckland</span> |
+		<br><br><br>
+		You can grab tickets to the reputation tour <a href="https://taylorswift.com/events"> on Taylor's website</a>. 
+		Special thanks to <a href="https://www.instagram.com/photayshop/?hl=en">Photayshop</a> for this beautiful background.
+		If I'm missing a show, I got the time slightly wrong, you need a friend, or you hate how poorly I made this page, feel free to tell me (@turtlebyte) on <a href="https://discord.gg/taylorswift">the r/TaylorSwift Discord</a>.
 	</div>
 	
 	<script type="text/javascript">
 	var oneDay = 24*60*60*1000;
-	var thirdDate = new Date("2018-05-08T11:00:00Z");
-
+	var thirdDate;
 //you'd think i'd use something better than a huge array
 
 	var concert = [
@@ -177,6 +180,9 @@
 		document.getElementById("stadium").innerHTML = stadium;
 		document.getElementById("city").innerHTML = city;
 	};
+	
+	//show this on-load
+	show(0);
 	
 	function count(){
 	var firstDate = new Date();
