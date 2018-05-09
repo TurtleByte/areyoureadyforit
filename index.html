@@ -56,8 +56,8 @@
 	<span style="font-size:225%">Click On The Show You're Attending<br></span>
 	<span style="font-size:175%">
 <!-- Wow, look at this beautiful, efficient list -->
-		<a><span class="showButton" onclick=show(0)>Glendale</span></a> | 
-		<span class="showButton" onclick=show(1)>Santa Clara Day 1</span> | 
+		<span class="showButton" onclick=show(0)>Glendale</span> | 
+		<a><span class="showButton" onclick=show(1)>Santa Clara Day 1</span></a> | 
 		<span class="showButton" onclick=show(2)>Santa Clara Day 2</span> | 
 		<span class="showButton" onclick=show(3)>Pasadena Day 1</span> |
 		<span class="showButton" onclick=show(4)>Pasadena Day 2</span> |
@@ -182,7 +182,7 @@
 	};
 	
 	//show this on-load
-	show(0);
+	show(1);
 	
 	function count(){
 		var firstDate = new Date();
@@ -202,6 +202,12 @@
 		var diffMinutes = (diffHours - Math.floor(diffHours)) * 60;
 		var diffSeconds = (diffMinutes - Math.floor(diffMinutes)) * 60;
 
+		if (thirdDate < firstDate){
+			if (diffDays < 0.08333){
+			document.getElementById("count2").style.color = "#ef0080"} 
+		} else {
+			document.getElementById("count2").style.color = "#000000";};
+		
 		diffDays = Math.floor(diffDays);
 		diffHours = Math.floor(diffHours);
 		diffMinutes = Math.floor(diffMinutes);
@@ -232,6 +238,7 @@
 				document.getElementById("count2").innerHTML = diffDays + " Days, " + diffHours + " Hours, " + diffMinutes + " Minutes, " + diffSeconds + " Seconds";
 			};
 		}
+		
 	};
 
 	$('.showButton').click(function(){
