@@ -3,253 +3,97 @@
 	<title>Are you Ready For It?</title>
 	<style>
 	div{
-	font-family: "Kepler";
+	font-family: "IM FELL DW Pica";
 	text-align: right;
 	color: black;
 	}
 	.count {
 	position: absolute;
 	top: 50%;
-	left: 65%;
+	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 65%;
+	width: 75%;
 	}
 	body {
-    background-image: url("bigreputation.png");
+    background-image: url("banner.jpg");
 	background-position: 50% 40%;
 	background-size:100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
     }
 	@font-face {
-    font-family: Kepler;
-    src: url('Kepler Std Bold Semicondensed Display.otf');
+    font-family: Uni Sans Heavy;
+    src: url('Uni Sans Heavy.otf');
     font-weight: normal;
     font-style: normal;
 	}
-	a {
+	a:link {
     text-decoration: none;
-	color: rgb(239,0,128);
+	color: black;
 	}
-	.shows {
-	position: relative;
-	transform: translate(0%, 110%);
-	width: 65%;
-	height: 100%;
-	float: right;
-	}
-	.showButton {
-	cursor: pointer;
-	};
 	</style>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="count">
-		<img src="rep.png" width="45%" /><br>
-		<h1><span id="stadium" style="font-size:200%"></span><br>
-		<span id="city" style="font-size:175%"></span><br>
-		<span id="count2" style="font-size:150%"></span></h1>
-	</div>
-	<div class="shows">
-	<span style="font-size:225%">Click On The Show You're Attending<br></span>
-	<span style="font-size:175%">
-<!-- Wow, look at this beautiful, efficient list -->
-		<span class="showButton" onclick=show(0)>Glendale</span> | 
-		<span class="showButton" onclick=show(1)>Santa Clara Day 1</span> | 
-		<span class="showButton" onclick=show(2)>Santa Clara Day 2</span> | 
-		<span class="showButton" onclick=show(3)>Pasadena Day 1</span> |
-		<span class="showButton" onclick=show(4)>Pasadena Day 2</span> |
-		<span class="showButton" onclick=show(5)>Seattle</span> |
-		<span class="showButton" onclick=show(6)>Denver</span> |
-		<span class="showButton" onclick=show(7)>Chicago Day 1</span> |
-		<span class="showButton" onclick=show(8)>Chicago Day 2</span> |
-		<span class="showButton" onclick=show(9)>Manchester Day 1</span> |
-		<span class="showButton" onclick=show(10)>Manchester Day 2</span> |
-		<span class="showButton" onclick=show(11)>Dublin Day 1</span> |
-		<span class="showButton" onclick=show(12)>Dublin Day 2</span> |
-		<span class="showButton" onclick=show(13)>London Day 1</span> |
-		<span class="showButton" onclick=show(14)>London Day 2</span> |
-		<span class="showButton" onclick=show(15)>Louisville</span> |
-		<span class="showButton" onclick=show(16)>Columbus</span> |
-		<span class="showButton" onclick=show(17)>Landover Day 1</span> |
-		<span class="showButton" onclick=show(18)>Landover Day 2</span> |
-		<span class="showButton" onclick=show(19)>Philadelphia Day 1</span> |
-		<span class="showButton" onclick=show(20)>Philadelphia Day 2</span> |
-		<span class="showButton" onclick=show(21)>Cleveland</span> |
-		<span class="showButton" onclick=show(22)>East Rutherford Day 1</span> |
-		<span class="showButton" onclick=show(23)>East Rutherford Day 2</span> |
-		<span class="showButton" onclick=show(24)>East Rutherford Day 3</span> |
-		<span class="showButton" onclick=show(25)>Foxborough Day 1</span> |
-		<span class="showButton" onclick=show(26)>Foxborough Day 2</span> |
-		<span class="showButton" onclick=show(27)>Foxborough Day 3</span> |	
-		<span class="showButton" onclick=show(28)>Toronto Day 1</span> |	
-		<span class="showButton" onclick=show(29)>Toronto Day 2</span> |
-		<span class="showButton" onclick=show(30)>Pittsburgh</span> |
-		<span class="showButton" onclick=show(31)>Atlanta Day 1</span> |
-		<span class="showButton" onclick=show(32)>Atlanta Day 2</span> |
-		<span class="showButton" onclick=show(33)>Tampa</span> |
-		<span class="showButton" onclick=show(34)>Miami Gardens</span> |
-		<span class="showButton" onclick=show(35)>Nashville</span> |
-		<span class="showButton" onclick=show(36)>Detroit</span> |
-		<span class="showButton" onclick=show(37)>Minneapolis Day 1</span> |
-		<span class="showButton" onclick=show(38)>Minneapolis Day 2</span> |
-		<span class="showButton" onclick=show(39)>Kansas City</span> |
-		<span class="showButton" onclick=show(40)>Indianapolis</span> |
-		<span class="showButton" onclick=show(41)>St. Louis</span> |
-		<span class="showButton" onclick=show(42)>New Orleans</span> |
-		<span class="showButton" onclick=show(43)>Houston</span> |
-		<span class="showButton" onclick=show(44)>Arlington Day 1</span> |
-		<span class="showButton" onclick=show(45)>Arlington Day 2</span> |
-		<span class="showButton" onclick=show(46)>Perth</span> |
-		<span class="showButton" onclick=show(47)>Melbourne</span> |
-		<span class="showButton" onclick=show(48)>Sydney</span> |
-		<span class="showButton" onclick=show(49)>Brisbane</span> |
-		<span class="showButton" onclick=show(50)>Auckland</span> |
-		<span class="showButton" onclick=show(51)>Tokyo Day 1</span> |
-		<a><span class="showButton" onclick=show(52)>Tokyo Day 2</span></a> |
-		<br><br><br>
-		You can grab tickets to the reputation tour <a href="https://taylorswift.com/events"> on Taylor's website</a>. 
-		Special thanks to <a href="https://www.instagram.com/photayshop/?hl=en">Photayshop</a> for this beautiful background.
-		If I'm missing a show, I got the time slightly wrong, you need a friend, or you hate how poorly I made this page, feel free to tell me (@turtlebyte) on <a href="https://discord.gg/taylorswift">the r/TaylorSwift Discord</a>.
+		<h1><a href="https://discord.gg/taylorswift"><span style="font-size:300%"><i>folklore</span><br><br></i><span id="message" style="font-size:125%">She will return in</span></a><br>
+		<span id="count2" style="font-size:125%"></span></h1>
 	</div>
 	
 	<script type="text/javascript">
 	var oneDay = 24*60*60*1000;
-	var thirdDate;
-//you'd think i'd use something better than a huge array
-
-	var concert = [
-		["University of Phoenix Stadium","Glendale, Arizona, USA",new Date("2018-05-09T03:00:00Z")],
-		["Levi's Stadium Day 1","Santa Clara, California, USA",new Date("2018-05-12T03:00:00Z")],
-		["Levi's Stadium Day 2","Santa Clara, California, USA",new Date("2018-05-13T03:00:00Z")],
-		["Rose Bowl Day 1","Pasadena, California, USA",new Date("2018-05-19T03:00:00Z")],
-		["Rose Bowl Day 2","Pasadena, California, USA",new Date("2018-05-20T03:00:00Z")],
-		["CenturyLink Field","Seattle, Washington, USA",new Date("2018-05-23T03:00:00Z")],
-		["Sports Authority Field at Mile High","Denver, Colorado, USA",new Date("2018-05-26T02:00:00Z")],
-		["Soldier Field Day 1","Chicago, Illinois, USA",new Date("2018-06-02T01:00:00Z")],
-		["Soldier Field Day 2","Chicago, Illinois, USA",new Date("2018-06-03T01:00:00Z")],
-		["Etihad Stadium Day 1","Manchester, England, UK",new Date("2018-06-08T19:00:00Z")],
-		["Etihad Stadium Day 2","Manchester, England, UK",new Date("2018-06-09T19:00:00Z")],
-		["Croke Park Day 1","Dublin, Ireland",new Date("2018-06-15T19:00:00Z")],
-		["Croke Park Day 2","Dublin, Ireland",new Date("2018-06-16T19:00:00Z")],
-		["Wembley Stadium Day 1","London, England, UK",new Date("2018-06-22T01:00:00Z")],
-		["Wembley Stadium Day 2","London, England, UK",new Date("2018-06-23T01:00:00Z")],
-		["Papa John's Cardinal Stadium","Louisville, Kentucky, USA",new Date("2018-06-31T00:00:00Z")],
-		["Ohio Stadium","Columbus, Ohio, USA",new Date("2018-07-08T00:00:00Z")],
-		["FedExField Day 1","Washington DC, USA",new Date("2018-07-11T00:00:00Z")],
-		["FedExField Day 2","Washington DC, USA",new Date("2018-07-12T00:00:00Z")],
-		["Lincoln Financial Field Day 1","Philadelphia, Pennyslvania, USA",new Date("2018-07-14T00:00:00Z")],
-		["Lincoln Financial Field Day 2","Philadelphia, Pennyslvania, USA",new Date("2018-07-15T00:00:00Z")],
-		["FirstEnergy Stadium","Cleveland, Ohia, USA",new Date("2018-07-18T00:00:00Z")],
-		["MetLife Stadium Day 1","East Rutherford, New Jersey, USA",new Date("2018-07-21T00:00:00Z")],
-		["MetLife Stadium Day 2","East Rutherford, New Jersey, USA",new Date("2018-07-22T00:00:00Z")],
-		["MetLife Stadium Day 3","East Rutherford, New Jersey, USA",new Date("2018-07-23T00:00:00Z")],
-		["Gillette Stadium Day 1","Foxborough, Massachusetts, USA",new Date("2018-07-27T00:00:00Z")],
-		["Gillette Stadium Day 2","Foxborough, Massachusetts, USA",new Date("2018-07-28T00:00:00Z")],
-		["Gillette Stadium Day 3","Foxborough, Massachusetts, USA",new Date("2018-07-29T00:00:00Z")],
-		["Rogers Centre Day 1","Toronto, Ontario, Canada",new Date("2018-08-04T00:00:00Z")],
-		["Rogers Centre Day 2","Toronto, Ontario, Canada",new Date("2018-08-05T00:00:00Z")],
-		["Heinz Field","Pittsburgh, Pennysylvania, USA",new Date("2018-08-08T00:00:00Z")],
-		["Mercedes-Benz Stadium Day 1","Atlanta, Georgia, USA",new Date("2018-08-11T00:00:00Z")],
-		["Mercedes-Benz Stadium Day 2","Atlanta, Georgia, USA",new Date("2018-08-12T00:00:00Z")],
-		["Raymond James Stadium","Tampa, Florida, USA",new Date("2018-08-15T00:00:00Z")],
-		["Hard Rock Stadium","Miami Gardens, Florida, USA",new Date("2018-08-19T00:00:00Z")],
-		["Nissan Stadium","Nashville, Tennessee , USA",new Date("2018-08-26T01:00:00Z")],
-		["Ford Field","Detroit, Michigan , USA",new Date("2018-08-29T00:00:00Z")],
-		["U.S. Bank Stadium Day 1","Minneapolis, Minnesota, USA",new Date("2018-09-01T01:00:00Z")],
-		["U.S. Bank Stadium Day 2","Minneapolis, Minnesota, USA",new Date("2018-09-02T01:00:00Z")],
-		["Arrowhead Stadium","Kansas City, Missouri, USA",new Date("2018-09-09T01:00:00Z")],
-		["Lucas Oil Stadium","Indianapolis, Indiana, USA",new Date("2018-09-16T00:00:00Z")],
-		["The Dome at America's Center","St. Louis, Missouri, USA",new Date("2018-09-19T01:00:00Z")],
-		["Mercedes-Benz Superdome","New Orleans, Louisiana, USA",new Date("2018-09-23T01:00:00Z")],
-		["NRG Stadium","Houston, Texas, USA",new Date("2018-09-30T01:00:00Z")],
-		["AT&T Stadium Day 1","Arlington, Texas, USA",new Date("2018-10-06T01:00:00Z")],
-		["AT&T Stadium Day 2","Arlington, Texas, USA",new Date("2018-10-07T01:00:00Z")],
-		["Optus Stadium","Perth, Western Australia, Australia",new Date("2018-10-19T11:00:00Z")],
-		["Etihad Stadium","Melbourne, Victoria, Australia",new Date("2018-10-26T08:00:00Z")],
-		["Stadium Australia","Sydney, New South Wales, Australia",new Date("2018-11-02T08:00:00Z")],
-		["The Gabba","Brisbane, Queensland, Australia",new Date("2018-11-06T09:00:00Z")],
-		["Mount Smart Stadium","Auckland, New Zealand",new Date("2018-11-09T06:00:00Z")],
-		["Tokyo Dome","Tokyo, Japan",new Date("2018-11-20T10:00:00Z")],
-		["Tokyo Dome","Tokyo, Japan",new Date("2018-11-21T10:00:00Z")],
-	];
-		
-	function show(a){
-		stadium = concert[a][0];
-		city = concert[a][1];
-		thirdDate = concert[a][2];
-		
-		document.getElementById("stadium").innerHTML = stadium;
-		document.getElementById("city").innerHTML = city;
-	};
-	
-	//show this on-load
-	show(52);
+	var thirdDate = new Date("2020-07-24T04:00:00Z");	
 	
 	function count(){
-		var firstDate = new Date();
-		
-		var diffDays2 = (thirdDate.getTime() - firstDate.getTime()) / oneDay;
-		var diffHours2 = (diffDays2 - Math.floor(diffDays2)) * 24;
-		var diffMinutes2 = (diffHours2 - Math.floor(diffHours2)) * 60;
-		var diffSeconds2 = (diffMinutes2 - Math.floor(diffMinutes2)) * 60;
-		
-		diffDays2 = Math.floor(diffDays2);
-		diffHours2 = Math.floor(diffHours2);
-		diffMinutes2 = Math.floor(diffMinutes2);
-		diffSeconds2 = Math.floor(diffSeconds2);
-		
-		var diffDays = (firstDate.getTime() - thirdDate.getTime()) / oneDay;
-		var diffHours = (diffDays - Math.floor(diffDays)) * 24;
-		var diffMinutes = (diffHours - Math.floor(diffHours)) * 60;
-		var diffSeconds = (diffMinutes - Math.floor(diffMinutes)) * 60;
+	var firstDate = new Date();
+	
+	var diffDays2 = (thirdDate.getTime() - firstDate.getTime()) / oneDay;
+	var diffHours2 = (diffDays2 - Math.floor(diffDays2)) * 24;
+	var diffMinutes2 = (diffHours2 - Math.floor(diffHours2)) * 60;
+	var diffSeconds2 = (diffMinutes2 - Math.floor(diffMinutes2)) * 60;
+	
+	diffDays2 = Math.floor(diffDays2);
+	diffHours2 = Math.floor(diffHours2);
+	diffMinutes2 = Math.floor(diffMinutes2);
+	diffSeconds2 = Math.floor(diffSeconds2);
+	
+	var diffDays = (firstDate.getTime() - thirdDate.getTime()) / oneDay;
+	var diffHours = (diffDays - Math.floor(diffDays)) * 24;
+	var diffMinutes = (diffHours - Math.floor(diffHours)) * 60;
+	var diffSeconds = (diffMinutes - Math.floor(diffMinutes)) * 60;
 
-		if (thirdDate < firstDate){
-			if (diffDays < 0.125){
-			document.getElementById("count2").style.color = "#ef0080"} 
-		} else {
-			document.getElementById("count2").style.color = "#000000";};
-		
-		diffDays = Math.floor(diffDays);
-		diffHours = Math.floor(diffHours);
-		diffMinutes = Math.floor(diffMinutes);
-		diffSeconds = Math.floor(diffSeconds);
+	diffDays = Math.floor(diffDays);
+	diffHours = Math.floor(diffHours);
+	diffMinutes = Math.floor(diffMinutes);
+	diffSeconds = Math.floor(diffSeconds);
 	
 	//i get it, it's always plural. look, i'm lazy.
 	
-		if (thirdDate > firstDate){
-			if (diffDays2 == 0 && diffHours2 == 0 && diffMinutes2 == 0){
-			document.getElementById("count2").innerHTML = diffSeconds2 + " Seconds";
-			} else if (diffDays2 == 0 && diffHours2 == 0){
-				document.getElementById("count2").innerHTML = diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
-			} else if (diffDays2 == 0){
-				document.getElementById("count2").innerHTML = diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
-			} else {	
-				document.getElementById("count2").innerHTML = diffDays2 + " Days, " + diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
-			};
-		} else {
-			//document.body.style.backgroundImage = "url('tsn.jpg')";
-			//document.getElementById("city").innerHTML = "End Game.";
-			if(diffDays == 0 && diffHours == 0 && diffMinutes == 0){
-			document.getElementById("count2").innerHTML = diffSeconds + " Seconds";
-			} else if (diffDays == 0 && diffHours == 0){
-				document.getElementById("count2").innerHTML = diffMinutes + " Minutes, " + diffSeconds + " Seconds";
-			} else if (diffDays == 0){
-				document.getElementById("count2").innerHTML = diffHours + " Hours, " + diffMinutes + " Minutes, " + diffSeconds + " Seconds";
-			} else {	
-				document.getElementById("count2").innerHTML = diffDays + " Days, " + diffHours + " Hours, " + diffMinutes + " Minutes, " + diffSeconds + " Seconds";
-			};
-		}
-		
+	if (thirdDate > firstDate){
+		if (diffDays2 == 0 && diffHours2 == 0 && diffMinutes2 == 0){
+		document.getElementById("count2").innerHTML = diffSeconds2 + " Seconds";
+		} else if (diffDays2 == 0 && diffHours2 == 0){
+			document.getElementById("count2").innerHTML = diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
+		} else if (diffDays2 == 0){
+			document.getElementById("count2").innerHTML = diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
+		} else {	
+			document.getElementById("count2").innerHTML = diffDays2 + " Days, " + diffHours2 + " Hours, " + diffMinutes2 + " Minutes, " + diffSeconds2 + " Seconds";
+		};
+	} else {
+		// document.body.style.backgroundImage = "url('bigreputation.png')";
+		document.getElementById("message").innerHTML = "She has returned.";
+		if(diffDays == 0 && diffHours == 0 && diffMinutes == 0){
+		document.getElementById("count2").innerHTML = diffSeconds + " Seconds";
+		} else if (diffDays == 0 && diffHours == 0){
+			document.getElementById("count2").innerHTML = diffMinutes + " Minutes, " + diffSeconds + " Seconds";
+		} else if (diffDays == 0){
+			document.getElementById("count2").innerHTML = diffHours + " Hours, " + diffMinutes + " Minutes, " + diffSeconds + " Seconds";
+		} else {	
+			document.getElementById("count2").innerHTML = diffDays + " Days, " + diffHours + " Hours, " + diffMinutes + " Minutes, " + diffSeconds + " Seconds";
+		};
+	}
 	};
-
-	$('.showButton').click(function(){
-		$("html, body").animate({ scrollTop: 0 }, 600);
-		return false;
-	 });	
-
+		
 	window.setInterval(function(){
 		count();
 	}, 250);
